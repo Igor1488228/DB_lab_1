@@ -49,7 +49,7 @@ def insert_from_csv(f, year, conn, cursor, times_f):
     """ Функція заповнює таблицю з csv-файлу. Оброблює ситуації, пов'язані з втратою з'єднання з базою. Створює файл, в який записує, час виконання запиту."""
 
     start_time = datetime.datetime.now()
-    times_f.write(str(start_time) + " -- відкриття файлу " + f + '\n')
+    times_f.write(str(start_time) + " - відкриття файлу " + f + '\n')
     # відкриваємо файл та починаємо зчитувати дані з csv-файлу
     with open(f, "r", encoding="cp1251") as csv_file:
         print("Считування файлу " + f + ' ...')
